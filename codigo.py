@@ -6,7 +6,7 @@ guinchos = [
 
 carro = input("Qual é o modelo do seu carro? ")
 porte = input("Qual o porte do seu carro? (pequeno, médio, grande) ")
-tipo_problema = input("Qual é o tipo de problema que você está enfrentando? \n" 
+tipo_problema = input("Qual é o tipo de problema que você está enfrentando? \n\n" 
                       "Segue problemas: \n\n"
                       "1 -> colisão \n\n"
                       "2 -> problema elétrico \n\n"
