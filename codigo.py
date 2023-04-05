@@ -1,34 +1,41 @@
-guinchos = [
-    {'nome': 'Guincho de porte pequeno', 'tipo': 'plataforma', 'comprimento': 10},
-    {'nome': 'Guincho de porte médio', 'tipo': 'carreta', 'comprimento': 15},
-    {'nome': 'Guincho de porte grande', 'tipo': 'caminhão',  'comprimento': 20}
-]
+tipo_problemas = input("Selecione o tipo de problema:\n"
+                       "1 - Acidentes de trânsito\n"
+                       "2 - Roubo ou furto\n"
+                       "3 - Problema elétrico\n"
+                       "4 - Problema mecânico\n"
+                       "5 - Danos causados por fenômenos naturais\n"
+                       "6 - Sair\n")
 
-carro = input("Qual é o modelo do seu carro? ")
-porte = input("Qual o porte do seu carro? (pequeno, médio, grande) ")
-tipo_problema = input("Qual é o tipo de problema que você está enfrentando? \n\n" 
-                      "Segue problemas: \n\n"
-                      "1 -> colisão \n\n"
-                      "2 -> problema elétrico \n\n"
-                      "3 -> problema na suspensão \n\n")
+if tipo_problemas == "1":
+    solucao1 = input("Selecione uma opção:\n"
+                     "1 - Verificar se há vítimas e prestar socorro\n"
+                     "2 - Registrar o acidente junto às autoridades\n"
+                     "3 - Acionar o seguro\n")
 
-comprimento = 0
+if tipo_problemas == "2":
+    solucao2 = input("Selecione uma opção:\n"
+                     "1 - Registrar o roubo ou furto junto às autoridades\n"
+                     "2 - Acionar o seguro\n"
+                     "3 - Tomar medidas de segurança para evitar futuros roubos ou furtos\n")
 
-if porte == 'pequeno':
-    comprimento = 10
-elif porte == 'médio':
-    comprimento = 15
-elif porte == 'grande':
-    comprimento = 20
+if tipo_problemas == "3":
+    solucao3 = input("Selecione uma opção:\n"
+                     "1 - Verificar se há problemas na bateria ou no alternador\n"
+                     "2 - Verificar se há fusíveis queimados\n"
+                     "3 - Levar o veículo a um mecânico especializado\n")
 
-if tipo_problema == '1':
-    for guincho in guinchos:
-        if guincho['comprimento'] >= comprimento and guincho['tipo'] == 'caminhão':
-            print(f'O guincho mais adequado para o atendimento do {carro} com problema de {tipo_problema} é {guincho["nome"]}.')
-            break
-elif tipo_problema == '2':
-    print("O problema elétrico será avaliado por um profissional especializado em seu local.")
-elif tipo_problema == '3':
-    print(f"O carro {carro} com problema de suspensão será atendido por um guincho de porte médio.")
-else:
-    print("Tipo de problema inválido.")
+if tipo_problemas == "4":
+    solucao4 = input("Selecione uma opção:\n"
+                     "1 - Verificar se há problemas com o motor\n"
+                     "2 - Verificar se há problemas com a transmissão\n"
+                     "3 - Levar o veículo a um mecânico especializado\n")
+
+if tipo_problemas == "5":
+    solucao5 = input("Selecione uma opção:\n"
+                     "1 - Verificar se há danos estruturais no veículo\n"
+                     "2 - Acionar o seguro\n"
+                     "3 - Levar o veículo a um mecânico especializado\n")
+
+if tipo_problemas == "6":
+    print("Saindo...")
+

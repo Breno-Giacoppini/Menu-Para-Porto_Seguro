@@ -54,4 +54,7 @@ atualização ou correção da documentação necessária para operar o veículo
 __________________________________________________________________________________________________
 
 
-tipos de 
+tipos de Veículos: em casos de acidentes de trânsito, a seguradora pode enviar um guincho ou um
+veículo de reboque para transportar o veículo danificado para uma oficina mecânica. Já em casos
+de roubo ou furto, a seguradora pode enviar um investigador ou um veículo de apoio para ajudar o 
+cliente a lidar com a situação
