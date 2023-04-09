@@ -56,10 +56,13 @@ def determinar_tipo_veiculo():
             eixos = int(eixos)
             if eixos > 2:
                 print("Seu veículo é considerado de grande porte.")
+                print()
+                return "grande porte"
             else:
-                print("Seu veículo é considerado de pequeno porte.")
+                print("Seu veículo é considerado de pequeno/médio porte.")
+                print()
+                return "pequeno/médio porte"
             break
-    print()
 
 def lidar_com_problemas():
 
@@ -85,15 +88,15 @@ def lidar_com_problemas():
                                     "4 - retornar para página anterior\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Verifique se há vítimas e preste socorro imediatamente.")
+                    print("Estamos enviando uma viatura particular para o endereço", localizacao_do_usuario, ". Iremos te fornecer todo suporte necessário!")
                     raise SystemExit
                 elif tipo_problemas == "2":
                     print()
-                    print("Registre o acidente junto às autoridades competentes.")
+                    print("Estamos acionando as autoridades e enviando nosso suporte para te auxiliar!")
                     raise SystemExit
                 elif tipo_problemas == "3":
                     print()
-                    print("Acione o seu seguro e siga as instruções para receber assistência.")
+                    print("Estamos acionando o seguro para te ajudar com o acidente!")
                     raise SystemExit
                 elif tipo_problemas == "4":
                     break
@@ -111,15 +114,16 @@ def lidar_com_problemas():
                                     "4 - retornar para página anterior\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Registre o roubo ou furto junto às autoridades competentes.")
+                    print("Estamos registrando o roubo ou furto junto às autoridades!")
                     raise SystemExit
                 elif tipo_problemas == "2":
                     print()
-                    print("Acione o seu seguro e siga as instruções para receber assistência.")
+                    print("Estamos acionando o seguro para te ajudar!")
                     raise SystemExit
                 elif tipo_problemas == "3":
                     print()
-                    print("Tome medidas para aumentar a segurança do seu veículo, como instalar alarmes e rastreadores.")
+                    print("Algumas de nossas medidas são instalar alarmes, rastreadores e entre outros diversos meios. " 
+                          "Traga seu veículo em uma de nossas concessionárias para tomarmos a melhor decissão")
                     raise SystemExit
                 elif tipo_problemas == "4":
                     break
@@ -137,15 +141,20 @@ def lidar_com_problemas():
                                     "4 - retornar para página anterior\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Verifique se a bateria ou o alternador estão com problemas e faça os reparos necessários.")
+                    print("Estamos a seu caminho para que possamos verificar se a bateria ou o alternador estão com problemas e fazer os reparos necessários.")
                     raise SystemExit
                 elif tipo_problemas == "2":
                     print()
-                    print("Verifique se há fusíveis queimados e troque-os, se necessário.")
+                    print("Estamos a seu caminho para que possamos verificar se há fusíveis queimados e realizar a troca, caso necessário.")
                     raise SystemExit
                 elif tipo_problemas == "3":
                     print()
-                    print("Leve o veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.")
+                    if determinar_tipo_veiculo == "grande porte"> 2:    
+                        print("Estamos encaminhando a sua localização um guincho para veículos de grande porte, "
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.")
+                    else:
+                        print("Estamos encaminhando a sua localização um guincho para veículos de pequeno/médio porte, "
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.")
                     raise SystemExit
                 elif tipo_problemas == "4":
                     break
@@ -163,15 +172,20 @@ def lidar_com_problemas():
                                     "4 - retornar para página anterior\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Verifique o nível e a qualidade do óleo e do líquido de arrefecimento e faça as trocas necessárias.")
+                    print("Estamos a seu caminho para que possamos verificar o nível e a qualidade do óleo e do líquido de arrefecimento e fazer os reparos necessários.")
                     raise SystemExit
                 elif tipo_problemas == "2":
                     print()
-                    print("Verifique o estado dos pneus e do sistema de suspensão e faça as trocas ou reparos necessários.")
+                    print("Estamos a seu caminho para que possamos verificar o estado dos pneus e do sistema de suspensão, e realizar os devidos reparos.")
                     raise SystemExit
                 elif tipo_problemas == "3":
                     print()
-                    print("Leve o veículo a um mecânico especializado para diagnosticar e reparar o problema mecânico.")
+                    if determinar_tipo_veiculo == "grande porte"> 2:    
+                        print("Estamos encaminhando a sua localização um guincho para veículos de grande porte, "
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema mecâmico.")
+                    else:
+                        print("Estamos encaminhando a sua localização um guincho para veículos de pequeno/médio porte, "
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema mecâmico.")
                     raise SystemExit
                 elif tipo_problemas == "4":
                     break
@@ -184,20 +198,29 @@ def lidar_com_problemas():
                 print()
                 tipo_problemas = input("Selecione uma opção:\n\n"
                                     "1 - Verificar se há danos visíveis no veículo\n"
-                                    "2 - Acionar o seguro\n"
+                                    "2 - Atolamento\n"
                                     "3 - Tomar medidas de segurança para evitar futuros danos\n"
                                     "4 - retornar para página anterior\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Verifique se há danos visíveis no veículo e faça os reparos necessários.")
+                    print("Estamos a seu caminho para que possamos verificar se há danos visíveis no veículo e realizar os reparos necessários.")
                     raise SystemExit
                 elif tipo_problemas == "2":
                     print()
-                    print("Acione o seu seguro e siga as instruções para receber assistência.")
+                    if determinar_tipo_veiculo == "grande porte"> 2:    
+                        print("Estamos encaminhando a sua localização um guincho para veículos de grande porte, "
+                              "para que possamos desatolar e caso necessário levar o seu veículo a um mecânico especializado para diagnosticar e reparar " 
+                              "caso há problemas com seu veículo.")
+                    else:
+                        print("Estamos encaminhando a sua localização um guincho para veículos de pequeno/médio porte, "
+                              "para que possamos desatolar e caso necessário levar o seu veículo a um mecânico especializado para diagnosticar e reparar " 
+                              "caso há problemas com seu veículo.")
                     raise SystemExit
                 elif tipo_problemas == "3":
                     print()
-                    print("Tome medidas para aumentar a segurança do seu veículo em relação a fenômenos naturais, como estacionar em locais seguros e longe de árvores e postes.")
+                    print("Te recomendamos verificar os pneus, os lipadores para-brisa com frenquência, manter a lataria em bom estado, "
+                          "e manter um kit de emergência dentro do veículo.\n"
+                          "Caso precise de auxilio traga seu veículo em uma de nossas concessionárias para tomarmos as melhores decisões.")
                     raise SystemExit
                 elif tipo_problemas == "4":
                     break
@@ -207,7 +230,7 @@ def lidar_com_problemas():
 
         elif escolha_usuario == "6":
             print()
-            print("Obrigado por utilizar nosso sistema de ajuda. Volte sempre!")
+            print("Agradecemos por utilizar nosso sistema de ajuda!")
             break 
 
         else:
