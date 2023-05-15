@@ -62,9 +62,24 @@ def determinar_tipo_veiculo():
                 print("Seu veículo é considerado de pequeno/médio porte.")
                 print()
                 return "pequeno/médio porte"
+
+def escolha_usuario_encerramento():
+    while True:
+        escolha = input("Selecione uma opção:\n\n"
+                        "1 - Encerrar atendimento!\n"
+                        "2 - Continuar navegando no menu!\n\n")
+        if escolha == "1":
+            print("\nAgradecemos por utilizar nosso sistema de ajuda!")
+            raise SystemExit
+        elif escolha == "2":
             break
+        else:
+            print()
+            print("Opção inválida, digite somente 1 ou 2.\n")
 
 def lidar_com_problemas():
+
+    tipo_veiculo = determinar_tipo_veiculo()
 
     localizacao_do_usuario = input("Para que podemos te ajudar, digite sua localização: ")
 
@@ -85,48 +100,58 @@ def lidar_com_problemas():
                                     "1 - Verificar se há vítimas e prestar socorro\n"
                                     "2 - Registrar o acidente junto às autoridades\n"
                                     "3 - Acionar o seguro\n"
-                                    "4 - retornar para página anterior\n\n")
+                                    "4 - Retornar para página anterior\n"
+                                    "5 - Encerrar atendimento\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Estamos enviando uma viatura particular para o endereço", localizacao_do_usuario, ". Iremos te fornecer todo suporte necessário!")
-                    raise SystemExit
+                    print("Estamos enviando uma viatura particular para o endereço", localizacao_do_usuario, ". Iremos te fornecer todo suporte necessário!\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "2":
                     print()
-                    print("Estamos acionando as autoridades e enviando nosso suporte para te auxiliar!")
-                    raise SystemExit
+                    print("Estamos acionando as autoridades e enviando nosso suporte para te auxiliar!\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "3":
                     print()
-                    print("Estamos acionando o seguro para te ajudar com o acidente!")
-                    raise SystemExit
+                    print("Estamos acionando o seguro para te ajudar com o acidente!\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "4":
                     break
+                elif tipo_problemas == "5":
+                    print()
+                    print("Agradecemos por utilizar nosso sistema de ajuda!")
+                    raise SystemExit
                 else:
                     print()
                     print("Opção inválida. Por favor, selecione uma opção válida.")
                     
-        elif escolha_usuario == "2":
+        if escolha_usuario == "2":
             while True:
                 print()
                 tipo_problemas = input("Selecione uma opção:\n\n"
                                     "1 - Registrar o roubo ou furto junto às autoridades\n"
                                     "2 - Acionar o seguro\n"
                                     "3 - Tomar medidas de segurança para evitar futuros roubos ou furtos\n"
-                                    "4 - retornar para página anterior\n\n")
+                                    "4 - retornar para página anterior\n"
+                                    "5 - Encerrar atendimento\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Estamos registrando o roubo ou furto junto às autoridades!")
-                    raise SystemExit
+                    print("Estamos registrando o roubo ou furto junto às autoridades!\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "2":
                     print()
-                    print("Estamos acionando o seguro para te ajudar!")
-                    raise SystemExit
+                    print("Estamos acionando o seguro para te ajudar!\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "3":
                     print()
                     print("Algumas de nossas medidas são instalar alarmes, rastreadores e entre outros diversos meios. " 
-                          "Traga seu veículo em uma de nossas concessionárias para tomarmos a melhor decissão")
-                    raise SystemExit
+                          "Traga seu veículo em uma de nossas concessionárias para tomarmos a melhor decissão\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "4":
                     break
+                elif tipo_problemas == "5":
+                    print()
+                    print("Agradecemos por utilizar nosso sistema de ajuda!")
+                    raise SystemExit
                 else:
                     print()
                     print("Opção inválida. Por favor, selecione uma opção válida.")
@@ -138,26 +163,31 @@ def lidar_com_problemas():
                                     "1 - Verificar se há problemas na bateria ou no alternador\n"
                                     "2 - Verificar se há fusíveis queimados\n"
                                     "3 - Levar o veículo a um mecânico especializado\n"
-                                    "4 - retornar para página anterior\n\n")
+                                    "4 - retornar para página anterior\n"
+                                    "5 - Encerrar atendimento\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Estamos a seu caminho para que possamos verificar se a bateria ou o alternador estão com problemas e fazer os reparos necessários.")
-                    raise SystemExit
+                    print("Estamos a seu caminho para que possamos verificar se a bateria ou o alternador estão com problemas e fazer os reparos necessários.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "2":
                     print()
-                    print("Estamos a seu caminho para que possamos verificar se há fusíveis queimados e realizar a troca, caso necessário.")
-                    raise SystemExit
+                    print("Estamos a seu caminho para que possamos verificar se há fusíveis queimados e realizar a troca, caso necessário.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "3":
                     print()
-                    if determinar_tipo_veiculo == "grande porte"> 2:    
+                    if tipo_veiculo == "grande porte":
                         print("Estamos encaminhando a sua localização um guincho para veículos de grande porte, "
-                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.")
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.\n")
                     else:
                         print("Estamos encaminhando a sua localização um guincho para veículos de pequeno/médio porte, "
-                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.")
-                    raise SystemExit
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema elétrico.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "4":
                     break
+                elif tipo_problemas == "5":
+                    print()
+                    print("Agradecemos por utilizar nosso sistema de ajuda!")
+                    raise SystemExit
                 else:
                     print()
                     print("Opção inválida. Por favor, selecione uma opção válida.")
@@ -169,26 +199,31 @@ def lidar_com_problemas():
                                     "1 - Verificar o óleo e o líquido de arrefecimento\n"
                                     "2 - Verificar os pneus e o sistema de suspensão\n"
                                     "3 - Levar o veículo a um mecânico especializado\n"
-                                    "4 - retornar para página anterior\n\n")
+                                    "4 - retornar para página anterior\n"
+                                    "5 - Encerrar atendimento\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Estamos a seu caminho para que possamos verificar o nível e a qualidade do óleo e do líquido de arrefecimento e fazer os reparos necessários.")
-                    raise SystemExit
+                    print("Estamos a seu caminho para que possamos verificar o nível e a qualidade do óleo e do líquido de arrefecimento e fazer os reparos necessários.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "2":
                     print()
-                    print("Estamos a seu caminho para que possamos verificar o estado dos pneus e do sistema de suspensão, e realizar os devidos reparos.")
-                    raise SystemExit
+                    print("Estamos a seu caminho para que possamos verificar o estado dos pneus e do sistema de suspensão, e realizar os devidos reparos.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "3":
                     print()
-                    if determinar_tipo_veiculo == "grande porte"> 2:    
+                    if tipo_veiculo == "grande porte":
                         print("Estamos encaminhando a sua localização um guincho para veículos de grande porte, "
-                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema mecâmico.")
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema mecâmico.\n")
                     else:
                         print("Estamos encaminhando a sua localização um guincho para veículos de pequeno/médio porte, "
-                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema mecâmico.")
-                    raise SystemExit
+                              "para que possamos levar o seu veículo a um mecânico especializado para diagnosticar e reparar o problema mecâmico.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "4":
                     break
+                elif tipo_problemas == "5":
+                    print()
+                    print("Agradecemos por utilizar nosso sistema de ajuda!")
+                    raise SystemExit
                 else:
                     print()
                     print("Opção inválida. Por favor, selecione uma opção válida.")
@@ -200,30 +235,35 @@ def lidar_com_problemas():
                                     "1 - Verificar se há danos visíveis no veículo\n"
                                     "2 - Atolamento\n"
                                     "3 - Tomar medidas de segurança para evitar futuros danos\n"
-                                    "4 - retornar para página anterior\n\n")
+                                    "4 - retornar para página anterior\n"
+                                    "5 - Encerrar atendimento\n\n")
                 if tipo_problemas == "1":
                     print()
-                    print("Estamos a seu caminho para que possamos verificar se há danos visíveis no veículo e realizar os reparos necessários.")
-                    raise SystemExit
+                    print("Estamos a seu caminho para que possamos verificar se há danos visíveis no veículo e realizar os reparos necessários.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "2":
                     print()
-                    if determinar_tipo_veiculo == "grande porte"> 2:    
+                    if tipo_veiculo == "grande porte":    
                         print("Estamos encaminhando a sua localização um guincho para veículos de grande porte, "
                               "para que possamos desatolar e caso necessário levar o seu veículo a um mecânico especializado para diagnosticar e reparar " 
-                              "caso há problemas com seu veículo.")
+                              "caso há problemas com seu veículo.\n")
                     else:
                         print("Estamos encaminhando a sua localização um guincho para veículos de pequeno/médio porte, "
                               "para que possamos desatolar e caso necessário levar o seu veículo a um mecânico especializado para diagnosticar e reparar " 
-                              "caso há problemas com seu veículo.")
-                    raise SystemExit
+                              "caso há problemas com seu veículo.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "3":
                     print()
                     print("Te recomendamos verificar os pneus, os lipadores para-brisa com frenquência, manter a lataria em bom estado, "
                           "e manter um kit de emergência dentro do veículo.\n"
-                          "Caso precise de auxilio traga seu veículo em uma de nossas concessionárias para tomarmos as melhores decisões.")
-                    raise SystemExit
+                          "Caso precise de auxilio traga seu veículo em uma de nossas concessionárias para tomarmos as melhores decisões.\n")
+                    escolha_usuario_encerramento()
                 elif tipo_problemas == "4":
                     break
+                elif tipo_problemas == "5":
+                    print()
+                    print("Agradecemos por utilizar nosso sistema de ajuda!")
+                    raise SystemExit
                 else:
                     print()
                     print("Opção inválida. Por favor, selecione uma opção válida.")
@@ -231,12 +271,11 @@ def lidar_com_problemas():
         elif escolha_usuario == "6":
             print()
             print("Agradecemos por utilizar nosso sistema de ajuda!")
-            break 
+            raise SystemExit 
 
         else:
             print()
             print("Opção inválida. Por favor, selecione uma opção válida.")
 
 realizar_login()
-determinar_tipo_veiculo()
 lidar_com_problemas()
